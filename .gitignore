@@ -1,0 +1,29 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.streamlit/secrets.toml
+.env
+
+# Runtime data
+data/*.db
+data/*.db-*
+data/exports/*
+!data/exports/.gitkeep
+logs/*
+!logs/.gitkeep
+evidence/*
+!evidence/.gitkeep
+*.log
+
+# Office temporary files
+~$*.xlsx
+~$*.xls
+
+# IDE
+.vscode/
+.idea/

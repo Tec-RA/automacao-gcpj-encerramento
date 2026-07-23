@@ -1,0 +1,21 @@
+# Equivalencias observadas no video e regras conservadoras para o primeiro MVP.
+# A chave representa o ATO da planilha. O valor deve ser exatamente o texto
+# disponivel no campo Motivo do GCPJ.
+mappings:
+  IMPROCEDENTE: "IMPROCEDENCIA"
+  IMPROCEDENCIA: "IMPROCEDENCIA"
+  EXTINTO SEM MERITO: "EXTINTO SEM RESOLUCAO DE MERITO"
+  EXTINTO SEM RESOLUCAO DE MERITO: "EXTINTO SEM RESOLUCAO DE MERITO"
+  ACORDO COM CUSTOS: "ACORDO COM CUSTOS"
+  ACORDO SEM CUSTOS: "ACORDO SEM CUSTOS"
+  DESISTENCIA DA ACAO: "DESISTENCIA DA ACAO"
+  LIQUIDACAO: "LIQUIDACAO"
+  ARQUIVADO: "ARQUIVADO"
+  CANCELADO: "CANCELADO"
+  APENSADO: "APENSADO"
+
+# Atos que indicam que o processo ainda nao deve ser encerrado automaticamente.
+blocked:
+  AUTOR RECORREU: "Linha ignorada: o ATO indica recurso do autor."
+  REU RECORREU: "Linha ignorada: o ATO indica recurso do reu."
+  RECURSO PENDENTE: "Linha ignorada: existe recurso pendente."

@@ -1,0 +1,44 @@
+selectors:
+  closure_menu_link:
+    - "a:has-text('Encerramento de Processos')"
+    - "xpath=//a[contains(translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'encerramento de processos')]"
+
+  search_npc_input:
+    - "xpath=//*[contains(normalize-space(.), 'Nº do Processo Bradesco')]/following::input[1]"
+    - "xpath=//*[contains(normalize-space(.), 'N do Processo Bradesco')]/following::input[1]"
+    - "input[name*='processo' i]"
+    - "input[id*='processo' i]"
+
+  search_button:
+    - "input[type='submit'][value*='pesquisar' i]"
+    - "input[type='button'][value*='pesquisar' i]"
+    - "button:has-text('pesquisar')"
+    - "xpath=//*[@value='pesquisar' or normalize-space(.)='pesquisar']"
+
+  closure_date_input:
+    - "xpath=//*[normalize-space(.)='Data:']/following::input[1]"
+    - "input[name*='data' i]"
+    - "input[id*='data' i]"
+
+  closure_reason_select:
+    - "xpath=//*[contains(normalize-space(.), 'Motivo:')]/following::select[1]"
+    - "select[name*='motivo' i]"
+    - "select[id*='motivo' i]"
+
+  closure_details:
+    - "xpath=//*[contains(normalize-space(.), 'Detalhes do Encerramento')]/following::textarea[1]"
+    - "textarea[name*='detalhe' i]"
+    - "textarea[id*='detalhe' i]"
+    - "textarea"
+
+  save_button:
+    - "input[type='submit'][value*='salvar' i]"
+    - "input[type='button'][value*='salvar' i]"
+    - "button:has-text('salvar')"
+    - "xpath=//*[@value='salvar' or normalize-space(.)='salvar']"
+
+  back_button:
+    - "input[value*='voltar' i]"
+    - "button:has-text('voltar')"
+    - "a:has-text('voltar')"
+    - "xpath=//*[@value='voltar' or normalize-space(.)='voltar']"

@@ -1,0 +1,38 @@
+chrome:
+  executable: "C:/Program Files/Google/Chrome/Application/chrome.exe"
+  user_data_dir: "C:/chrome_gcpj_debug"
+  debug_host: "127.0.0.1"
+  debug_port: 9222
+  startup_timeout_seconds: 20
+
+gcpj:
+  url_contains: "juridico8.bradesco.com.br/gcpj"
+  title_contains: "GCPJ"
+  timeout_ms: 20000
+  navigation_timeout_ms: 30000
+  slow_mo_ms: 120
+
+paths:
+  database: "data/gcpj_automation.db"
+  logs: "logs"
+  evidence: "evidence"
+  exports: "data/exports"
+  lock_file: "data/automation.lock"
+
+automation:
+  screenshot_on_success: true
+  screenshot_on_error: true
+  retry_attempts: 2
+  success_terms:
+    - "SUCESSO"
+    - "ENCERRAMENTO SOLICITADO"
+    - "REGISTRO SALVO"
+    - "OPERACAO REALIZADA"
+  error_terms:
+    - "ERRO"
+    - "NAO FOI POSSIVEL"
+    - "CAMPO OBRIGATORIO"
+    - "INFORMACAO INVALIDA"
+
+selectors: "config/selectors.yaml"
+reason_mapping: "config/motivo_mapping.yaml"
